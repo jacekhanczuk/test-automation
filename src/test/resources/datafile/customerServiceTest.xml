@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:InputTestData xmlns:ns2="urn:org:easetech:easytest:1.0">
+	<TestMethod name="loginProcessTest">
+		<TestRecord id="1">
+			<InputData>
+				<Entry key="firstname" value="John" />
+				<Entry key="firstname" value="Smith" />
+				<Entry key="emailAddress" value="foobar201801@wp.pl" />
+				<Entry key="password" value="123456" />
+				<Entry key="expectedConfirmationMessage" value="Welcome, John Smith" />
+			</InputData>
+		</TestRecord>
+	</TestMethod>
+</ns2:InputTestData>
