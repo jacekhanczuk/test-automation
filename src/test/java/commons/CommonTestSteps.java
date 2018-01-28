@@ -20,7 +20,4 @@ public class CommonTestSteps {
 		javascript.fullScrollDownPage();
 	}
 
-	public void dismissCookieInfoPopup() {
-		javascript.closeCookieInfoPopup();
-	}
 }

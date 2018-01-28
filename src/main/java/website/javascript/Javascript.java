@@ -10,16 +10,12 @@ public class Javascript {
 		js = ((JavascriptExecutor) driver);
 	}
 
-	private void execute(String script){
+	private void execute(String script) {
 		js.executeScript(script);
 	}
-	
+
 	public void fullScrollDownPage() {
 		execute("window.scrollTo(0, document.body.scrollHeight)");
-	}
-	
-	public void closeCookieInfoPopup() {
-		execute("closeReadCookieInfo()");
 	}
 
 }

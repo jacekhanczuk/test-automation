@@ -30,7 +30,7 @@ public class Element {
 		initLocationData();
 	}
 
-	private WebElement getWebElement() {
+	public WebElement getWebElement() {
 		return driver.findElement(by);
 	}
 

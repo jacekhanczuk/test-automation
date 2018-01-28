@@ -10,9 +10,9 @@ import website.locator.Locator;
 
 public class PageFactory {
 
-	private static <T> T createPageInstance(Class<T> pageClass) {
+	private static <T> T createPageInstance(Class<T> pageClass, WebDriver driver) {
 		try {
-			return pageClass.newInstance();
+			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(driver);
 		} catch (ReflectiveOperationException e) {
 			e.printStackTrace();
 		}
@@ -45,7 +45,7 @@ public class PageFactory {
 	}
 
 	public static <T> T initElements(Class<T> pageClass, WebDriver driver) {
-		T page = createPageInstance(pageClass);
+		T page = createPageInstance(pageClass, driver);
 		injectValues(page, driver);
 		return page;
 	}

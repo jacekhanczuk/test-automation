@@ -1,9 +1,11 @@
 package website.pages;
 
+import org.openqa.selenium.WebDriver;
 import api.selenium.pagefactory.annotation.Selector;
 import website.elements.Element;
+import website.pages.page.BasePage;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
 	@Selector(id = "ctl00_MainContent_txtUserName")
 	private Element userEmailField;
@@ -13,6 +15,10 @@ public class LoginPage {
 
 	@Selector(id = "ctl00_MainContent_uxLoginButton")
 	private Element submitButton;
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
 
 	public void typeEmail(String emailAddress) {
 		userEmailField.sendKeys(emailAddress);

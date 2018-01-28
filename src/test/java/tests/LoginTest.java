@@ -16,6 +16,7 @@ import api.selenium.webdriver.WebDriverCreators;
 import api.selenium.webdriver.WebDriverProvider;
 import commons.CommonTestSteps;
 import website.pages.PageObjectManager;
+import website.pages.page.url.Url;
 
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = {
@@ -32,7 +33,7 @@ public class LoginTest {
 		driver = new WebDriverProvider(WebDriverCreators.CHROME).getDriver();
 		manager = new PageObjectManager(driver);
 		commonTestSteps = new CommonTestSteps(driver);
-		url = "http://www.foyles.co.uk/";
+		url = Url.MAIN_PAGE.getUrl();
 	}
 
 	@Test
