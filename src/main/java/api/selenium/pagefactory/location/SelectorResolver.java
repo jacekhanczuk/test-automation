@@ -1,4 +1,4 @@
-package api.selenium.annotationlab;
+package api.selenium.pagefactory.location;
 
 import org.openqa.selenium.By.ByClassName;
 import org.openqa.selenium.By.ByCssSelector;
@@ -7,6 +7,7 @@ import org.openqa.selenium.By.ByLinkText;
 import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.By.ByXPath;
 
+import api.selenium.pagefactory.annotation.Selector;
 import website.locator.Locator;
 
 public class SelectorResolver {

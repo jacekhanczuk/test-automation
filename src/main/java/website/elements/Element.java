@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import api.selenium.annotationlab.ByTypeCreator;
+import api.selenium.pagefactory.location.ByTypeCreator;
 import utils.synchronization.CustomFluentWait;
 import website.locator.Locator;
 
 public class Element {
-	public static final int TIMEOUT = 10;
+	private static final int TIMEOUT = 10;
 	private WebDriver driver;
 	private CustomFluentWait wait;
 	private Locator locator;

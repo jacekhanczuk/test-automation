@@ -1,4 +1,4 @@
-package api.selenium.annotationlab;
+package api.selenium.pagefactory.location;
 
 import org.openqa.selenium.By;
 import website.locator.Locator;

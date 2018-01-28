@@ -1,4 +1,4 @@
-package api.selenium.annotationlab;
+package api.selenium.pagefactory.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

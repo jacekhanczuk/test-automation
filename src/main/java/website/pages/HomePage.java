@@ -1,6 +1,6 @@
 package website.pages;
 
-import api.selenium.annotationlab.Selector;
+import api.selenium.pagefactory.annotation.Selector;
 import website.elements.Element;
 
 public class HomePage {

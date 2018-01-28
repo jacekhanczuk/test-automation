@@ -12,9 +12,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import api.selenium.webdriver.WebDriverCreators;
+import api.selenium.webdriver.WebDriverProvider;
 import commons.CommonTestSteps;
-import helpers.driver.WebDriverCreators;
-import helpers.driver.WebDriverProvider;
 import website.pages.PageObjectManager;
 
 @RunWith(DataDrivenTestRunner.class)
