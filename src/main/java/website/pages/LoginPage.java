@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import api.selenium.pagefactory.annotation.Selector;
 import website.elements.Element;
 import website.pages.page.BasePage;
+import website.pages.page.annotation.Page;
 
+@Page(url = "https://www.foyles.co.uk/public/login.aspx")
 public class LoginPage extends BasePage {
 
 	@Selector(id = "ctl00_MainContent_txtUserName")

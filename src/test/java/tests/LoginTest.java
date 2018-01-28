@@ -14,9 +14,7 @@ import org.openqa.selenium.WebDriver;
 
 import api.selenium.webdriver.WebDriverCreators;
 import api.selenium.webdriver.WebDriverProvider;
-import commons.CommonTestSteps;
 import website.pages.PageObjectManager;
-import website.pages.page.url.Url;
 
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = {
@@ -24,23 +22,19 @@ import website.pages.page.url.Url;
 
 public class LoginTest {
 	private PageObjectManager manager;
-	private CommonTestSteps commonTestSteps;
 	private WebDriver driver;
-	private String url;
 
 	@Before
 	public void setUp() {
 		driver = new WebDriverProvider(WebDriverCreators.CHROME).getDriver();
 		manager = new PageObjectManager(driver);
-		commonTestSteps = new CommonTestSteps(driver);
-		url = Url.MAIN_PAGE.getUrl();
 	}
 
 	@Test
 	public void loginProcessTest(@Param(name = "emailAddress") String emailAddress,
 			@Param(name = "password") String password,
 			@Param(name = "expectedConfirmationMessage") String expectedConfirmationMessage) {
-		commonTestSteps.loadMainPage(url);
+		manager.getHomePage().load();
 		manager.getHomePage().clickLoginButton();
 		manager.getLoginPage().loginProcess(emailAddress, password);
 
