@@ -1,7 +1,8 @@
 package website.pages;
 
 import org.openqa.selenium.WebDriver;
-import api.selenium.pagefactory.annotation.Selector;
+
+import selenium.pagefactory.annotation.Selector;
 import website.elements.Element;
 import website.pages.page.BasePage;
 import website.pages.page.annotation.Page;

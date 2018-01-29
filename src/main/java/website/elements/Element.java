@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import api.selenium.pagefactory.location.ByTypeCreator;
+import selenium.pagefactory.location.ByTypeCreator;
 import utils.synchronization.CustomFluentWait;
 import website.locator.Locator;
 

@@ -1,4 +1,4 @@
-package api.selenium.pagefactory.location;
+package selenium.pagefactory.location;
 
 import org.openqa.selenium.By;
 import website.locator.Locator;

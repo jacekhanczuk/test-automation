@@ -1,10 +1,10 @@
-package api.selenium.pagefactory;
+package selenium.pagefactory;
 
 import java.lang.reflect.Field;
 import org.openqa.selenium.WebDriver;
 
-import api.selenium.pagefactory.annotation.Selector;
-import api.selenium.pagefactory.location.SelectorResolver;
+import selenium.pagefactory.annotation.Selector;
+import selenium.pagefactory.location.SelectorResolver;
 import website.elements.Element;
 import website.locator.Locator;
 

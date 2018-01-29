@@ -1,7 +1,8 @@
 package website.pages;
 
 import org.openqa.selenium.WebDriver;
-import api.selenium.pagefactory.PageFactory;
+
+import selenium.pagefactory.PageFactory;
 
 public class PageObjectManager {
 	private WebDriver driver;
