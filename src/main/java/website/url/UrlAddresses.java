@@ -1,5 +1,5 @@
-package website.pages.page;
+package website.url;
 
-public class PageConfig {
+public class UrlAddresses {
 	public static final String MAIN_PAGE = "http://www.foyles.co.uk/";
 }
