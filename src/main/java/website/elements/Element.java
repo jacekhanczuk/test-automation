@@ -1,5 +1,7 @@
 package website.elements;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,6 +34,10 @@ public class Element {
 
 	public WebElement getWebElement() {
 		return driver.findElement(by);
+	}
+
+	public List<WebElement> getWebElementList() {
+		return driver.findElements(by);
 	}
 
 	public Element withValue(String value) {

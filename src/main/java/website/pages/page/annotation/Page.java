@@ -8,5 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Page {
-	String url() default "blank page";
+	String urlPath() default "";
+
+	boolean mainPage() default false;
 }

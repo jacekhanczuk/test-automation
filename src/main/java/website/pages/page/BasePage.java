@@ -7,6 +7,7 @@ import website.url.UrlResolver;
 public abstract class BasePage {
 	protected WebDriver driver;
 	protected DriverActions action;
+	String baseUrl = PageConfig.MAIN_PAGE;
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
@@ -14,7 +15,7 @@ public abstract class BasePage {
 	}
 
 	public void load() {
-		driver.get(UrlResolver.getUrl(this.getClass()));
+		driver.get(UrlResolver.getUrl(this.getClass(), baseUrl));
 	}
 
 }
