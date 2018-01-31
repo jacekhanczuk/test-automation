@@ -7,7 +7,7 @@ import website.elements.Element;
 import website.pages.page.BasePage;
 import website.pages.page.annotation.Page;
 
-@Page(url = "http://www.foyles.co.uk/")
+@Page()
 public class HomePage extends BasePage {
 
 	@Selector(xpath = "//a[@href='/Public/Login.aspx']")
