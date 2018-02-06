@@ -3,6 +3,7 @@ package tests;
 import static org.junit.Assert.*;
 
 import org.easetech.easytest.annotation.DataLoader;
+import org.easetech.easytest.loader.Loader;
 import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
@@ -12,13 +13,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import loaddata.CustomLoader;
 import selenium.webdriver.WebDriverCreators;
 import selenium.webdriver.WebDriverProvider;
 import website.pages.PageObjectManager;
 
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = {
-		"src/test/resources/datafile/customerServiceTest.xml" }, loaderType = LoaderType.XML, writeData = false)
+		"src/test/resources/datafileX/customerServiceTest.xml" },loader = CustomLoader.class, loaderType = LoaderType.CUSTOM, writeData = false)
 
 public class LoginTest {
 	private PageObjectManager manager;
@@ -34,12 +36,12 @@ public class LoginTest {
 	public void loginProcessTest(@Param(name = "emailAddress") String emailAddress,
 			@Param(name = "password") String password,
 			@Param(name = "expectedConfirmationMessage") String expectedConfirmationMessage) {
-		manager.getHomePage().load();
+		/*manager.getHomePage().load();
 		manager.getHomePage().clickLoginButton();
 		manager.getLoginPage().loginProcess(emailAddress, password);
 
 		assertEquals(expectedConfirmationMessage, manager.getHomePage().getWelcomeMessageLabelText());
-	}
+*/	}
 
 	@After
 	public void tearDown() {
