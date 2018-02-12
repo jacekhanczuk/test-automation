@@ -31,14 +31,14 @@ public class LoginPage extends BasePage {
 		userPasswordField.sendKeys(password);
 	}
 
-	public void submitLoginForm() {
+	public void clickSubmitButton() {
 		submitButton.click();
 	}
 
 	public void loginProcess(String emailAddress, String password) {
 		typeEmail(emailAddress);
 		typePassword(password);
-		submitLoginForm();
+		clickSubmitButton();
 	}
 
 }

@@ -5,10 +5,10 @@ import org.openqa.selenium.interactions.Actions;
 
 import website.webelement.Element;
 
-public class DriverActions {
+public class DriverAction {
 	private Actions action;
 
-	public DriverActions(WebDriver driver) {
+	public DriverAction(WebDriver driver) {
 		action = new Actions(driver);
 	}
 

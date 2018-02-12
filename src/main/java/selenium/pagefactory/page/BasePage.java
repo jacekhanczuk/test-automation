@@ -1,16 +1,16 @@
 package selenium.pagefactory.page;
 
 import org.openqa.selenium.WebDriver;
-import website.actions.DriverActions;
+import website.actions.DriverAction;
 import website.url.UrlResolver;
 
 public abstract class BasePage {
 	protected WebDriver driver;
-	protected DriverActions action;
+	protected DriverAction action;
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
-		action = new DriverActions(driver);
+		action = new DriverAction(driver);
 	}
 
 	public void load() {
