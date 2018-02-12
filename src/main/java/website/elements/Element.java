@@ -7,7 +7,7 @@ import utils.synchronization.CustomFluentWait;
 
 public class Element extends BaseElement {
 	protected static final int TIMEOUT = 10;
-	private CustomFluentWait fluentWait;
+	protected CustomFluentWait fluentWait;
 
 	public Element(ElementLocator locator, WebDriver driver) {
 		super(locator, driver);
@@ -35,5 +35,5 @@ public class Element extends BaseElement {
 		fluentWait.waitForElementDisplayed(this, TIMEOUT);
 		getWebElement().sendKeys(text);
 	}
-	
+
 }
