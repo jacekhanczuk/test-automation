@@ -1,4 +1,4 @@
-package website.pages.page.annotation;
+package selenium.pagefactory.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

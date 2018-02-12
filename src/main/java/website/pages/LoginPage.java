@@ -2,9 +2,9 @@ package website.pages;
 
 import org.openqa.selenium.WebDriver;
 
+import selenium.pagefactory.annotation.Page;
 import selenium.pagefactory.annotation.Selector;
-import website.pages.page.BasePage;
-import website.pages.page.annotation.Page;
+import selenium.pagefactory.page.BasePage;
 import website.webelement.Element;
 
 @Page(urlPath = "/public/login.aspx")

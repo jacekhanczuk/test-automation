@@ -3,9 +3,9 @@ package website.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import selenium.pagefactory.annotation.Page;
 import selenium.pagefactory.annotation.Selector;
-import website.pages.page.BasePage;
-import website.pages.page.annotation.Page;
+import selenium.pagefactory.page.BasePage;
 import website.webelement.Element;
 
 @Page(urlPath = "philosophy-psychology-social-sciences")

@@ -1,6 +1,6 @@
 package website.url;
 
-import website.pages.page.annotation.Page;
+import selenium.pagefactory.annotation.Page;
 
 public class UrlResolver {
 

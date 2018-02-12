@@ -1,4 +1,4 @@
-package website.pages.page;
+package selenium.pagefactory.page;
 
 import org.openqa.selenium.WebDriver;
 import website.actions.DriverActions;
