@@ -1,7 +1,8 @@
-package website.elements;
+package website.webelement;
 
 import org.openqa.selenium.WebDriver;
 
+import selenium.pagefactory.element.BaseElement;
 import selenium.pagefactory.location.ElementLocator;
 import utils.synchronization.CustomFluentWait;
 

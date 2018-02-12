@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import selenium.pagefactory.annotation.Selector;
-import website.elements.Element;
 import website.pages.page.BasePage;
 import website.pages.page.annotation.Page;
+import website.webelement.Element;
 
 @Page(urlPath = "philosophy-psychology-social-sciences")
 public class ProductsPage extends BasePage {

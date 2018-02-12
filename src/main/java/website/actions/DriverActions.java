@@ -3,7 +3,7 @@ package website.actions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import website.elements.Element;
+import website.webelement.Element;
 
 public class DriverActions {
 	private Actions action;

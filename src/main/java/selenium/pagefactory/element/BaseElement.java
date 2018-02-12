@@ -1,4 +1,4 @@
-package website.elements;
+package selenium.pagefactory.element;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import selenium.pagefactory.location.ByTypeCreator;
 import selenium.pagefactory.location.ElementLocator;
 
-public class BaseElement {
+public abstract class BaseElement {
 	private By by;
 	private WebDriver driver;
 	private ElementLocator locator;
@@ -20,6 +20,12 @@ public class BaseElement {
 		initLocationData();
 	}
 
+	public BaseElement withValue(String value) {
+		locator.insertValueIntoExpression(value);
+		updateLocation();
+		return this;
+	}
+	
 	private void initLocationData() {
 		by = ByTypeCreator.getTypeOfFindByObject(locator);
 	}
@@ -51,11 +57,5 @@ public class BaseElement {
 	public boolean isSelected() {
 		return getWebElement().isSelected();
 	}
-
-	public BaseElement withValue(String value) {
-		locator.insertValueIntoExpression(value);
-		updateLocation();
-		return this;
-	}
-
+	
 }

@@ -1,7 +1,8 @@
 package utils.synchronization;
 
 import org.openqa.selenium.WebDriver;
-import website.elements.Element;
+
+import website.webelement.Element;
 
 public class CustomFluentWait {
 	private FluentWaitFactory waitFactory;
