@@ -13,7 +13,6 @@ public class PageElement {
 	private By by;
 	private WebDriver driver;
 	private ElementLocator locator;
-	
 
 	public PageElement(ElementLocator locator, WebDriver driver) {
 		this.driver = driver;
@@ -29,16 +28,28 @@ public class PageElement {
 		initLocationData();
 	}
 
-	public By getLocation(){
+	public By getLocation() {
 		return by;
 	}
-	
+
 	public WebElement getWebElement() {
 		return driver.findElement(by);
 	}
 
 	public List<WebElement> getWebElementList() {
 		return driver.findElements(by);
+	}
+
+	public boolean isDisplayed() {
+		return getWebElement().isDisplayed();
+	}
+
+	public boolean isEnabled() {
+		return getWebElement().isEnabled();
+	}
+
+	public boolean isSelected() {
+		return getWebElement().isSelected();
 	}
 
 	public PageElement withValue(String value) {

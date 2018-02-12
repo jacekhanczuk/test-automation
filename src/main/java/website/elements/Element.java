@@ -36,8 +36,4 @@ public class Element extends PageElement {
 		getWebElement().sendKeys(text);
 	}
 	
-	public boolean isDisplayed() {
-		return getWebElement().isDisplayed();
-	}
-	
 }
