@@ -9,12 +9,12 @@ import org.openqa.selenium.WebElement;
 import selenium.pagefactory.location.ByTypeCreator;
 import selenium.pagefactory.location.ElementLocator;
 
-public class PageElement {
+public class BaseElement {
 	private By by;
 	private WebDriver driver;
 	private ElementLocator locator;
 
-	public PageElement(ElementLocator locator, WebDriver driver) {
+	public BaseElement(ElementLocator locator, WebDriver driver) {
 		this.driver = driver;
 		this.locator = locator;
 		initLocationData();
@@ -52,7 +52,7 @@ public class PageElement {
 		return getWebElement().isSelected();
 	}
 
-	public PageElement withValue(String value) {
+	public BaseElement withValue(String value) {
 		locator.insertValueIntoExpression(value);
 		updateLocation();
 		return this;

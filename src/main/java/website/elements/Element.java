@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import selenium.pagefactory.location.ElementLocator;
 import utils.synchronization.CustomFluentWait;
 
-public class Element extends PageElement {
+public class Element extends BaseElement {
 	protected static final int TIMEOUT = 10;
 	private CustomFluentWait fluentWait;
 
