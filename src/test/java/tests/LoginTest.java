@@ -19,7 +19,6 @@ import website.pages.PageObjectManager;
 @RunWith(DataDrivenTestRunner.class)
 @DataLoader(filePaths = {
 		"src/test/resources/datafile/customerServiceTest.xml" }, loaderType = LoaderType.XML, writeData = false)
-
 public class LoginTest {
 	private PageObjectManager manager;
 	private WebDriver driver;

@@ -16,9 +16,6 @@ public class HomePage extends BasePage {
 	@Selector(className = "WelcomeMessage")
 	private Element welcomeMessageLabel;
 
-	@Selector(id = "ctl00_MailingList")
-	public Element newsletterLink;
-
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}

@@ -8,15 +8,14 @@ import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.By.ByXPath;
 
 import selenium.pagefactory.annotation.Selector;
-import website.locator.Locator;
 
 public class SelectorResolver {
 
-	public static Locator resolveTypeOfByStatement(Selector selector) {
+	public static ElementLocator resolveTypeOfByStatement(Selector selector) {
 		return defineStatement(selector);
 	}
 
-	private static Locator defineStatement(Selector selector) {
+	private static ElementLocator defineStatement(Selector selector) {
 
 		if (isDefined(selector.xpath())) {
 			return createLocator(ByXPath.class, selector.xpath());
@@ -45,8 +44,8 @@ public class SelectorResolver {
 		return null;
 	}
 
-	private static Locator createLocator(Class<?> selectorType, String expression) {
-		return new Locator(selectorType, expression);
+	private static ElementLocator createLocator(Class<?> selectorType, String expression) {
+		return new ElementLocator(selectorType, expression);
 	}
 
 	private static boolean isDefined(String selectorExpression) {

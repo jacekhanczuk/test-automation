@@ -1,10 +1,10 @@
-package website.locator;
+package selenium.pagefactory.location;
 
-public class Locator {
+public class ElementLocator {
 	private String expression;
 	private Class<?> selectorType;
 
-	public Locator(Class<?> selectorType, String expression) {
+	public ElementLocator(Class<?> selectorType, String expression) {
 		this.selectorType = selectorType;
 		this.expression = expression;
 	}

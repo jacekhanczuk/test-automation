@@ -1,70 +1,43 @@
 package website.elements;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import selenium.pagefactory.location.ByTypeCreator;
+import selenium.pagefactory.location.ElementLocator;
 import utils.synchronization.CustomFluentWait;
-import website.locator.Locator;
 
-public class Element {
-	private static final int TIMEOUT = 10;
-	private WebDriver driver;
-	private CustomFluentWait wait;
-	private Locator locator;
-	private By by;
+public class Element extends PageElement {
+	protected static final int TIMEOUT = 10;
+	private CustomFluentWait fluentWait;
 
-	public Element(Locator locator, WebDriver driver) {
-		this.driver = driver;
-		this.locator = locator;
-		wait = new CustomFluentWait(driver);
-		initLocationData();
+	public Element(ElementLocator locator, WebDriver driver) {
+		super(locator, driver);
+		fluentWait = new CustomFluentWait(driver);
 	}
 
-	private void initLocationData() {
-		by = ByTypeCreator.getByTypeObject(locator);
-	}
-
-	private void updateLocation() {
-		initLocationData();
-	}
-
-	public WebElement getWebElement() {
-		return driver.findElement(by);
-	}
-
-	public List<WebElement> getWebElementList() {
-		return driver.findElements(by);
-	}
-
+	@Override
 	public Element withValue(String value) {
-		locator.insertValueIntoExpression(value);
-		updateLocation();
-		return this;
-	}
-
-	public String getText() {
-		return wait.getElementText(by, TIMEOUT);
-	}
-
-	public String getAttribute(String attribute) {
-		return wait.getElementAttribute(by, attribute, TIMEOUT);
-	}
-
-	public boolean isDisplayed() {
-		return getWebElement().isDisplayed();
+		return (Element) super.withValue(value);
 	}
 
 	public void click() {
-		wait.clickElement(by, TIMEOUT);
+		fluentWait.clickElement(this, TIMEOUT);
+	}
+
+	public String getText() {
+		return fluentWait.getElementText(this, TIMEOUT);
+	}
+
+	public String getAttribute(String attribute) {
+		return fluentWait.getElementAttribute(this, attribute, TIMEOUT);
 	}
 
 	public void sendKeys(String text) {
-		wait.waitForElementDisplayed(by, TIMEOUT);
+		fluentWait.waitForElementDisplayed(this, TIMEOUT);
 		getWebElement().sendKeys(text);
 	}
-
+	
+	public boolean isDisplayed() {
+		return getWebElement().isDisplayed();
+	}
+	
 }

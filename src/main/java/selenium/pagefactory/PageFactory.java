@@ -4,9 +4,9 @@ import java.lang.reflect.Field;
 import org.openqa.selenium.WebDriver;
 
 import selenium.pagefactory.annotation.Selector;
+import selenium.pagefactory.location.ElementLocator;
 import selenium.pagefactory.location.SelectorResolver;
 import website.elements.Element;
-import website.locator.Locator;
 
 public class PageFactory {
 
@@ -24,10 +24,10 @@ public class PageFactory {
 		for (Field field : declaredFields) {
 			if (field.isAnnotationPresent(Selector.class)) {
 				Selector selector = field.getAnnotation(Selector.class);
-				Locator locator = resolveSelectorStatement(selector);
+				ElementLocator locator = resolveSelectorStatement(selector);
 				Element element = null;
 				try {
-					element = (Element) field.getType().getConstructor(Locator.class, WebDriver.class)
+					element = (Element) field.getType().getConstructor(ElementLocator.class, WebDriver.class)
 							.newInstance(locator, driver);
 					field.setAccessible(true);
 					field.set(page, element);
@@ -40,7 +40,7 @@ public class PageFactory {
 		}
 	}
 
-	private static Locator resolveSelectorStatement(Selector annotation) {
+	private static ElementLocator resolveSelectorStatement(Selector annotation) {
 		return SelectorResolver.resolveTypeOfByStatement(annotation);
 	}
 
