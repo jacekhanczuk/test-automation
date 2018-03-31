@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import selenium.pagefactory.annotation.Selector;
 import selenium.pagefactory.location.ElementLocator;
 import selenium.pagefactory.location.SelectorResolver;
-import website.webelement.Element;
+import selenium.webelement.Element;
 
 public class PageFactory {
 

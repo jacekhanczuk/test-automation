@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 
-import website.webelement.Element;
+import selenium.webelement.Element;
 
 public class ExpectedEvents {
 	private WebDriver driver;

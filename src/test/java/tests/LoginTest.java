@@ -12,8 +12,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import selenium.webdriver.WebDriverCreators;
-import selenium.webdriver.WebDriverProvider;
+import webdriver.WebDriverCreators;
+import webdriver.WebDriverProvider;
 import website.pages.PageObjectManager;
 
 @RunWith(DataDrivenTestRunner.class)

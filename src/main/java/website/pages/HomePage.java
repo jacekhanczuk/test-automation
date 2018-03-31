@@ -2,10 +2,8 @@ package website.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import selenium.pagefactory.annotation.Page;
 import selenium.pagefactory.annotation.Selector;
-import selenium.pagefactory.page.BasePage;
-import website.webelement.Element;
+import selenium.webelement.Element;
 
 @Page
 public class HomePage extends BasePage {
