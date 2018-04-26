@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import selenium.Listeners;
 
 public class WebDriverCreators {
 	public static final WebDriverCreator CHROME = () -> {
@@ -11,7 +13,15 @@ public class WebDriverCreators {
                 "src/main/resources/seleniumdrivers/chromedrivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         setDefaultSettings(driver);
-        return driver;
+
+
+		EventFiringWebDriver eventDriver = new EventFiringWebDriver(driver);
+		Listeners EL = new Listeners();
+		eventDriver.register(EL);
+
+
+
+		return eventDriver;
     };
 
 	public static final WebDriverCreator DEFAULT = CHROME;

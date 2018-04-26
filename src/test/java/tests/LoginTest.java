@@ -12,6 +12,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import selenium.Listeners;
 import webdriver.WebDriverCreators;
 import webdriver.WebDriverProvider;
 import website.pages.PageObjectManager;
@@ -33,11 +35,13 @@ public class LoginTest {
 	public void loginProcessTest(@Param(name = "emailAddress") String emailAddress,
 			@Param(name = "password") String password,
 			@Param(name = "expectedConfirmationMessage") String expectedConfirmationMessage) {
-		manager.getHomePage().load();
+driver.get("https://www.google.pl/search?q=google&oq=g&aqs=chrome.0.69i59j69i57j69i60l3j0.923j0j4&sourceid=chrome&ie=UTF-8");
+		manager.getLoginPage().loginProcess(emailAddress, password);
+		/*manager.getHomePage().load();
 		manager.getHomePage().clickLoginButton();
 		manager.getLoginPage().loginProcess(emailAddress, password);
 
-		assertEquals(expectedConfirmationMessage, manager.getHomePage().getWelcomeMessageLabelText());
+		assertEquals(expectedConfirmationMessage, manager.getHomePage().getWelcomeMessageLabelText());*/
 	}
 
 	@After
